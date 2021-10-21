@@ -35,13 +35,17 @@
           </span>
           <!-- http://lorempixel.com/185/185/people/ -->
           <img
-            src="https://unavatar.now.sh/github/maykbrito"
+            src="https://unavatar.now.sh/github/davidtmasin"
             alt="Foto de David Teixeira de Masin "
           />
         </div>
 
         <h1 id="userName">David Teixeira</h1>
-        <a href="https://www.github.com/maykbrito" target="_blank">
+        <a
+          id="linkGithub"
+          href="https://www.github.com/maykbrito"
+          target="_blank"
+        >
           <img src="assets/images/github.svg" alt="ícone do github" />
           davidtmasin
         </a>
@@ -99,7 +103,8 @@
           //variável de escopo, quando o escopo acaba, a variável deixa de existir
           const social = tagLi.getAttribute('class')
           //alert(tagLi.children[0].href)
-          li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`
+          tagLi.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`
+          linkGithub.href = `https://github.com/${linksSocialMedia[social]}`
         }
       }
     </script>
