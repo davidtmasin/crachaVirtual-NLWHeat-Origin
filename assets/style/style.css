@@ -4,8 +4,8 @@
 
 html,
 body {
-  --grey: hsl(240, 9%, 89%);
   --black: hsl(240, 6%, 13%);
+  --grey: hsl(240, 9%, 89%);
 
   height: 100%;
   font-family: 'Roboto', sans-serif;
@@ -25,8 +25,8 @@ main {
 
 .container {
   max-width: 250px;
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
   text-align: center;
 
   color: var(--grey);
@@ -47,7 +47,8 @@ main {
 
 .avatar > img {
   width: 10rem;
-  object-fit: cover; /*Serve para ajustar a imagem ao tamanho que foi atribuído a ela*/
+  height: 11.5rem;
+  object-fit: cover;
 
   clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 }
@@ -59,10 +60,16 @@ h1 {
 }
 
 a {
+  color: var(--grey);
   text-decoration: none;
 
   margin-top: 0.25rem;
-  color: var(--grey);
+
+  display: flex;
+  gap: 0.75rem;
+
+  justify-content: center;
+  align-items: center;
 }
 
 p {
@@ -71,6 +78,7 @@ p {
 
 ul {
   margin-top: 4rem;
+
   list-style: none;
   padding: 0;
 
