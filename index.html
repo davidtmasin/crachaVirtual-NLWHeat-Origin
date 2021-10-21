@@ -35,31 +35,28 @@
           </span>
           <!-- http://lorempixel.com/185/185/people/ -->
           <img
-            src="https://unavatar.now.sh/github/davidtmasin"
+            src="https://unavatar.now.sh/github/maykbrito"
             alt="Foto de David Teixeira de Masin "
           />
         </div>
 
-        <h1>David Teixeira</h1>
-        <a href="https://www.github.com/davidtmasin" target="_blank">
+        <h1 id="userName">David Teixeira</h1>
+        <a href="https://www.github.com/maykbrito" target="_blank">
           <img src="assets/images/github.svg" alt="ícone do github" />
           davidtmasin
         </a>
 
         <p>Analista de Testes</p>
 
-        <ul>
-          <li>
-            <a
-              href="https://www.youtube.com/c/tiodavideducação"
-              target="_blank"
-            >
+        <ul id="socialLinks">
+          <li class="youtube">
+            <a href="https://www.youtube.com/c/maykbrito" target="_blank">
               <img src="assets/images/yt-logo.svg" alt="ícone do youtube" />
             </a>
           </li>
 
-          <li>
-            <a href="https://www.instagram.com/dteixeira.92" target="_blank">
+          <li class="instagram">
+            <a href="https://www.instagram.com/maykbrito" target="_blank">
               <img
                 src="assets/images/insta-logo.svg"
                 alt="ícone do instagram"
@@ -67,13 +64,13 @@
             </a>
           </li>
 
-          <li>
-            <a href="https://www.facebook.com/dteixeira.92" target="_blank">
+          <li class="facebook">
+            <a href="https://www.facebook.com/maykbrito" target="_blank">
               <img src="assets/images/face-logo.svg" alt="ícone do facebook" />
             </a>
           </li>
 
-          <li>
+          <li class="twitter">
             <a href="https://www.twitter.com/davidtmasin" target="_blank">
               <img
                 src="assets/images/twitter-logo.svg"
@@ -85,12 +82,25 @@
       </div>
     </main>
     <script>
+      //variável global
       const linksSocialMedia = {
         github: 'davidtmasin',
         youtube: 'tiodavideducação',
         facebook: 'dteixeira.92',
         instagram: 'dteixeira.92',
         twitter: 'davidtmasin'
+      }
+      changeSocialMediaLinks()
+
+      function changeSocialMediaLinks() {
+        // document.getElementById('userName').textContent = 'Xablau'
+        // userName.textContent = 'Jubileu'
+        for (let tagLi of socialLinks.children) {
+          //variável de escopo, quando o escopo acaba, a variável deixa de existir
+          const social = tagLi.getAttribute('class')
+          //alert(tagLi.children[0].href)
+          li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`
+        }
       }
     </script>
   </body>
