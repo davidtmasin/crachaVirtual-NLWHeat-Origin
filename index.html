@@ -35,22 +35,23 @@
           </span>
           <!-- http://lorempixel.com/185/185/people/ -->
           <img
-            src="https://unavatar.now.sh/github/davidtmasin"
+            id="userPhoto"
+            src="https://unavatar.now.sh/github/maykbrito"
             alt="Foto de David Teixeira de Masin "
           />
         </div>
 
-        <h1 id="userName">David Teixeira</h1>
+        <h1 id="userName">Mayk Brito</h1>
         <a
           id="linkGithub"
           href="https://www.github.com/maykbrito"
           target="_blank"
         >
           <img src="assets/images/github.svg" alt="ícone do github" />
-          davidtmasin
+          <span id="userNameLogin">davidtmasin</span>
         </a>
 
-        <p>Analista de Testes</p>
+        <p id="userBio">Analista de Testes</p>
 
         <ul id="socialLinks">
           <li class="youtube">
@@ -85,28 +86,6 @@
         </ul>
       </div>
     </main>
-    <script>
-      //variável global
-      const linksSocialMedia = {
-        github: 'davidtmasin',
-        youtube: 'tiodavideducação',
-        facebook: 'dteixeira.92',
-        instagram: 'dteixeira.92',
-        twitter: 'davidtmasin'
-      }
-      changeSocialMediaLinks()
-
-      function changeSocialMediaLinks() {
-        // document.getElementById('userName').textContent = 'Xablau'
-        // userName.textContent = 'Jubileu'
-        for (let tagLi of socialLinks.children) {
-          //variável de escopo, quando o escopo acaba, a variável deixa de existir
-          const social = tagLi.getAttribute('class')
-          //alert(tagLi.children[0].href)
-          tagLi.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`
-          linkGithub.href = `https://github.com/${linksSocialMedia[social]}`
-        }
-      }
-    </script>
+    <script src="assets/script/main.js"></script>
   </body>
 </html>
