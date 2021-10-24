@@ -18,9 +18,12 @@ body {
 }
 
 main {
-  background: url(../images/background.png);
-  width: 375px;
-  height: 812px;
+  background: url(../images/background.svg) no-repeat center/cover;
+  /* width: 375px;
+ height: 812px; */
+  width: 100vw;
+  min-height: 812px;
+  height: 100vh;
 }
 
 .container {
@@ -86,4 +89,84 @@ ul {
   gap: 0.5rem;
 
   justify-content: center;
+}
+
+@media (width: 768px) {
+  /* Tablet */
+  main {
+    background: url(../images/Desktop.svg) no-repeat center/cover;
+  }
+  .avatar {
+    margin: 12.5rem 0 0 0.5rem;
+    /* margin: 12.5rem auto 0; */
+  }
+
+  .avatar span img {
+    width: 7rem;
+  }
+
+  .avatar > img {
+    width: 13rem;
+    height: 14rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  #linkGithub > img {
+    width: 1.5rem;
+  }
+  #userNameLogin {
+    font-size: 1.2rem;
+  }
+
+  p {
+    margin-top: 3rem;
+    font-size: 1rem;
+  }
+
+  ul {
+    margin-top: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Desktop */
+  main {
+    background: url(../images/Desktop.svg) no-repeat center/cover;
+  }
+  .avatar {
+    margin: 12.5rem 0 0 0.5rem;
+    /* margin: 12.5rem auto 0; */
+  }
+
+  .avatar > img {
+    width: 13rem;
+    height: 14rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .avatar span img {
+    width: 7rem;
+  }
+
+  #linkGithub > img {
+    width: 1.5rem;
+  }
+  #userNameLogin {
+    font-size: 1.2rem;
+  }
+
+  p {
+    margin-top: 3rem;
+    font-size: 1rem;
+  }
+
+  ul {
+    margin-top: 2rem;
+  }
 }
